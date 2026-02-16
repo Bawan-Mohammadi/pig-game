@@ -1,0 +1,346 @@
+:last-child::shadow,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  /* Deepened left-to-right gradient with a subtle vignette overlay */
+  background:
+    radial-gradient(
+      1200px circle at 50% 40%,
+      rgba(0, 0, 0, 0.25),
+      transparent 60%
+    ),
+    /* 2. "Light cover" soft whitish mist */
+    linear-gradient(0deg, rgba(255, 255, 255, 0.18), rgba(255, 255, 255, 0.18)),
+    /* 3. Main dark gradient */ linear-gradient(90deg, #c62828 0%, #6a1b9a 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box--0 {
+  display: grid;
+  grid-area: one;
+  border-radius: 10px 0px 0px 10px;
+  padding: 7rem 7rem;
+}
+.box--1 {
+  padding: 7rem 7rem;
+  display: grid;
+  grid-area: two;
+  border-radius: 0px 10px 10px 0px;
+}
+
+.boxes {
+  position: relative;
+  box-shadow: -1px 20px 40px 2px rgba(43, 0, 23, 0.74);
+}
+
+.grid {
+  display: grid;
+  grid-template-areas: "one two";
+}
+.bg-color {
+  background-color: rgba(216, 168, 183, 0.62);
+}
+.player-active{
+  background-color: #ffd9e4;
+
+}
+
+.player {
+  font-size: 40px;
+  margin: 0;
+}
+.score {
+  color: #c23b64;
+  font-size: 70px;
+  font-weight: lighter;
+}
+
+.players {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.current-box {
+  background-color: #c23b64;
+  border-radius: 5px;
+  color: white;
+  padding: 20px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.current {
+  font-weight: lighter;
+  font-size: 20px;
+  margin: 0;
+}
+.current-zero {
+  font-size: 50px;
+  font-weight: lighter;
+  margin: 0;
+}
+.btns-container {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  left: calc(50% - 100px);
+}
+.btns-container-new {
+  top: 30px;
+
+  /* 50% – Takes half of the available space (width or height) of the containing element.
+- 100px – Subtracts 100 pixels from that half-width (or half-height). */
+}
+.btns-container-dice {
+  bottom: 12rem;
+  /* clamp() lets you set a value that scales responsively,
+   but never goes too small or too large. 
+   clamp(min, preferred, max)*/
+}
+.btns-container-hold {
+  bottom: 8rem;
+}
+
+.white-btns {
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  padding: 12px 28px;
+  border-radius: 20px;
+  font-size: 16px;
+}
+.pip {
+  padding: 6px;
+  border-radius: 50px;
+  margin: 10px;
+  background-color: #c23b64;
+  opacity: 0;
+}
+/* select the spans */
+.pip.top-left {
+  grid-area: a;
+}
+.pip.top-right {
+  grid-area: b;
+}
+.pip.mid-left {
+  grid-area: c;
+}
+.pip.middle {
+  grid-area: g;
+}
+.pip.mid-right {
+  grid-area: d;
+}
+.pip.bottom-left {
+  grid-area: e;
+}
+.pip.bottom-right {
+  grid-area: f;
+}
+
+.dice-face {
+  display: grid;
+  grid-template-areas:
+    "a . b"
+    "c g d"
+    "e . f";
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  flex: 0 0 auto;
+  /* flex: <flex-grow> <flex-shrink> <flex-basis>
+      “This item keeps its natural size and ignores available space.”
+    It won’t stretch even if there’s extra space
+    It won’t shrink even if space is tight
+    flex-basis → “What size do I start at?
+    Start at my natural size" */
+  background-color: white;
+  padding: 2px 2px;
+  position: absolute;
+  left: calc(50% - 47px);
+  top: 9rem;
+  box-shadow: 4px 6px 50px -25px #000000;
+  place-items: center;
+}
+.hidden {
+  display: none;
+}
+
+.dice-face[data-face="1"] .middle {
+  opacity: 1;
+}
+
+.dice-face[data-face="2"] .top-left,
+.dice-face[data-face="2"] .bottom-right {
+  opacity: 1;
+}
+
+.dice-face[data-face="3"] .top-left,
+.dice-face[data-face="3"] .middle,
+.dice-face[data-face="3"] .bottom-right {
+  opacity: 1;
+}
+
+.dice-face[data-face="4"] .top-left,
+.dice-face[data-face="4"] .top-right,
+.dice-face[data-face="4"] .bottom-left,
+.dice-face[data-face="4"] .bottom-right {
+  opacity: 1;
+}
+
+.dice-face[data-face="5"] .top-left,
+.dice-face[data-face="5"] .top-right,
+.dice-face[data-face="5"] .middle,
+.dice-face[data-face="5"] .bottom-left,
+.dice-face[data-face="5"] .bottom-right {
+  opacity: 1;
+}
+
+.dice-face[data-face="6"] .top-left,
+.dice-face[data-face="6"] .top-right,
+.dice-face[data-face="6"] .mid-left,
+.dice-face[data-face="6"] .mid-right,
+.dice-face[data-face="6"] .bottom-left,
+.dice-face[data-face="6"] .bottom-right {
+  opacity: 1;
+}
+.winner{
+  background-color: #FFD166
+
+
+;
+}

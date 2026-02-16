@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script
+      type="text/javascript"
+      src="/___vscode_livepreview_injected_script"
+    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pig Game</title>
+    <link rel="stylesheet" type="text/css" href="pig-game.css" />
+  </head>
+  <body>
+    <div class="boxes grid">
+      <div class="btns-container btns-container-new">
+        <button class="white-btns new-game">🔄 NEW GAME</button>
+      </div>
+      <div class="box--0 bg-color">
+        <div class="players">
+          <p class="player" id="player--0">PLAYER 1</p>
+          <p class="score" id="score--0"></p>
+          <div class="current-box">
+            <p class="current">CURRENT</p>
+            <p class="current-zero c--0">0</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="box--1 bg-color ">
+        <div class="players">
+          <p class="player" id="player--1">PLAYER 2</p>
+          <p class="score" id="score--1"></p>
+          <div class="current-box">
+            <p class="current">CURRENT</p>
+            <p class="current-zero c--1">0</p>
+          </div>
+        </div>
+      </div>
+      <div class="dice-face">
+        <span class="pip top-left" data-face="1"></span>
+        <!-- An HTML data‑attribute is a way to store extra information on an element
+          without affecting its semantics or layout.
+          The browser doesn’t do anything special with it on its own — 
+          it’s just custom metadata that your JavaScript and CSS can read. -->
+        <span class="pip top-right" data-face="2"></span>
+        <span class="pip middle" data-face="3"></span>
+        <span class="pip bottom-left" data-face="4"></span>
+        <span class="pip bottom-right" data-face="5"></span>
+        <span class="pip mid-left" data-face="6"></span>
+          <span class="pip mid-right"></span>
+      </div>
+
+      <div class="btns-container btns-container-dice">
+        <button class="white-btns">🎲 ROLL DICE</button>
+      </div>
+      <div class="btns-container btns-container-hold">
+        <button class="white-btns">📥 HOLD</button>
+      </div>
+    </div>
+
+    <script src="pig-game.js"></script>
+  </body>
+</html>
