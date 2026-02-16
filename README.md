@@ -1,4 +1,4 @@
-<img width="1440" height="785" alt="Screenshot 2026-02-17 at 12 30 08 AM" src="https://github.com/user-attachments/assets/e293ffad-89c0-43b4-b9e0-0f82b3e462ea" />
+<img width="1440" height="785" alt="Screenshot 2026-02-17 at 12 30 00 AM" src="https://github.com/user-attachments/assets/a3ca6521-3f73-4610-8e27-5a515a80fb86" />
 <img width="1440" height="785" alt="Screenshot 2026-02-17 at 12 30 08 AM" src="https://github.com/user-attachments/assets/661f8168-9faf-4d3e-9c34-b5b9a6f52de9" />
 
 # 🎲 Pig Game
