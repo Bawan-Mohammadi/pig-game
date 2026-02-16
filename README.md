@@ -3,7 +3,7 @@
 
 # 🎲 Pig Game
 
-A two-player dice game where players compete to reach the highest score first. Built using **HTML, CSS, and JavaScript**, this project focuses on learning core JS game logic, conditionals, and DOM manipulation.
+A two-player dice game where players compete to reach the highest score (100) first. If you roll one or press hold, the player changes. Built using **HTML, CSS, and JavaScript**, this project focuses on learning core JS game logic, conditionals, and DOM manipulation.
 
 ## Features
 -  Two-player turn-based gameplay  
